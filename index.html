@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de Notas UNIVI</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="./assets/bolsa-de-estudos.png" alt="Logo" />
+        <h1 class="titulo">UNIVI - Sistemas de Notas</h1>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <h2>Disciplina Linguagem JavaScript</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>1° Bimestre</th>
+              <th>2° Bimestre</th>
+              <th>3° Bimestre</th>
+              <th>4° Bimestre</th>
+              <th>Média Final</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaDeNotas">
+            <tr class="aluno" id="primeiro-aluno">
+              <td class="info-nome">Mariana</td>
+              <td class="info-nota1">9</td>
+              <td class="info-nota2">10</td>
+              <td class="info-nota3">8.5</td>
+              <td class="info-nota4">9</td>
+              <td class="info-media">0</td>
+              <td class="info-situação">0</td>
+            </tr>
+
+            <tr class="aluno">
+              <td class="info-nome">Lucas</td>
+              <td class="info-nota1">8</td>
+              <td class="info-nota2">7.5</td>
+              <td class="info-nota3">5</td>
+              <td class="info-nota4">9</td>
+              <td class="info-media"></td>
+              <td class="info-situação">0</td>
+            </tr>
+
+            <tr class="aluno">
+              <td class="info-nome">Ana Julia</td>
+              <td class="info-nota1">10</td>
+              <td class="info-nota2">6</td>
+              <td class="info-nota3">4.5</td>
+              <td class="info-nota4">5</td>
+              <td class="info-media"></td>
+              <td class="info-situação">0</td>
+            </tr>
+
+            <tr class="aluno">
+              <td class="info-nome">Rodrigo</td>
+              <td class="info-nota1">1</td>
+              <td class="info-nota2">2</td>
+              <td class="info-nota3">3.5</td>
+              <td class="info-nota4">2</td>
+              <td class="info-media"></td>
+              <td class="info-situação">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <label for="filtrar-alunos">Pesquise:</label>
+        <input type="text" id="filtrar-alunos" placeholder="Nome do aluno" />
+      </section>
+      <tr class="divisao"></tr>
+      <section class="container">
+        <h2 id="titulo-form">Adicionar Aluno</h2>
+
+        <form id="form-adiciona">
+          <div class="grupo">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              placeholder="Nome"
+              class="input-form"
+            />
+          </div>
+          <div class="grupo">
+            <label for="nota1">Primeiro Bimestre</label>
+            <input
+              type="text"
+              id="nota1"
+              placeholder="Nota 1"
+              class="input-form"
+            />
+          </div>
+          <div class="grupo">
+            <label for="nota2">Segundo Bimestre</label>
+            <input
+              type="text"
+              id="nota2"
+              placeholder="Nota 2"
+              class="input-form"
+            />
+          </div>
+          <div class="grupo">
+            <label for="nota3">Terceiro Bimestre</label>
+            <input
+              type="text"
+              id="nota3"
+              placeholder="Nota 3"
+              class="input-form"
+            />
+          </div>
+          <div class="grupo">
+            <label for="nota4">Quarto Bimestre</label>
+            <input
+              type="text"
+              id="nota4"
+              placeholder="Nota 4"
+              class="input-form"
+            />
+          </div>
+          <ul id="mensagens-de-erros"></ul>
+          <button id="adiciona-aluno" class="botao">Inserir Dados</button>
+        </form>
+      </section>
+    </main>
+    <script src="./js/media.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/pesquisa_aluno.js"></script>
+    <script src="./js/remove_aluno.js"></script>
+  </body>
+</html>
